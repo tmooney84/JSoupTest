@@ -36,10 +36,10 @@ public class Surf_Captain3 {
 
                     // Regular expression to match wave height patterns
                     Pattern pattern = Pattern.compile("(\\d+-\\d+\\+?|\\d+\\+?) ft");
-                    Matcher matcher = pattern.matcher(text);
+                    Matcher matchedText = pattern.matcher(text);
 
-                    if (matcher.find()) {
-                        String waveHeight = matcher.group(1);
+                    if (matchedText.find()) {
+                        String waveHeight = matchedText.group(1);
                         System.out.println("Current Wave height at location #" + i + ": " + waveHeight);
                     } else {
                         System.out.println("Wave height not found at location #" + i);
