@@ -32,10 +32,10 @@ public class Surf_Captain3 {
                 Element div = scConnect.getElementById("fcst-current-title");
                 if (div != null) {
                     String text = div.text();
-                    System.out.println("Fetched text for location #" + i + ": " + text);
+                   // System.out.println("Fetched text for location #" + i + ": " + text);
 
                     // Regular expression to match wave height patterns
-                    Pattern pattern = Pattern.compile("(\\d+-\\d+\\+?|\\d+) ft");
+                    Pattern pattern = Pattern.compile("(\\d+-\\d+\\+?|\\d+\\+?) ft");
                     Matcher matcher = pattern.matcher(text);
 
                     if (matcher.find()) {
